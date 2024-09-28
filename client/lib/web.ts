@@ -1,11 +1,23 @@
-import { Session } from 'next-auth';
+const BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
-const BASE_URL = process.env.BACKEND_URL;
+export async function httpGet(path: string) {
+  const url = `http://${BASE_URL}${path}`;
+  const res = await fetch(url, {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': '*',
+    },
+  });
+  return await res.json();
+}
 
-export async function httpGet(path: string, session: Session | null) {
-  let url = `http://${BASE_URL}${path}`;
-  const email = session?.user?.email;
-  if (email) url += `?user=${email}`;
-  const res = await fetch(url);
+export async function httpPost<T>(path: string, data: T) {
+  const url = `http://${BASE_URL}${path}`;
+
+  const res = await fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(data),
+  });
+
   return await res.json();
 }

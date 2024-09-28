@@ -23,7 +23,7 @@ export default async function Navigation() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/recipe" legacyBehavior passHref>
+          <Link href="/recipes" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Recipe List
             </NavigationMenuLink>
