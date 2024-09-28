@@ -29,17 +29,15 @@ const WelcomePage: React.FC = () => {
   return (
     <div className={poppins.className} style={styles.container}>
       <header style={styles.header}>
-        <img src={logo} alt="Cookbook Logo" style={styles.logo} />{" "}
-        {/* Add logo here */}
         <h1 style={styles.title}>Welcome to Your Personal Recipe Book</h1>
         <p style={styles.description}>
-          Discover, organize, and create your favorite recipes all in one place.
+          Cook, share, and create your cherished recipes all in one place.
         </p>
       </header>
 
       <div style={styles.buttonContainer}>
         <button style={styles.button} onClick={navigateToRecipes}>
-          Explore Recipes
+          Explore Current Recipes
         </button>
         <button style={styles.button} onClick={navigateToAddRecipe}>
           Add New Recipe
@@ -52,11 +50,11 @@ const WelcomePage: React.FC = () => {
 // Define inline styles (optional)
 const styles: { [key: string]: React.CSSProperties } = {
   container: {
-    fontFamily: "Arial, sans-serif",
-    backgroundColor: "#f8f8f8",
-    color: "#333",
-    padding: "20px",
-    textAlign: "center",
+    fontFamily: "'Poppins', sans-serif", // Set the Poppins font
+    backgroundColor: '#f8f8f8',
+    color: '#333',
+    padding: '20px',
+    textAlign: 'center',
   },
   header: {
     marginBottom: "40px",
@@ -76,14 +74,15 @@ const styles: { [key: string]: React.CSSProperties } = {
     marginTop: "20px",
   },
   button: {
-    padding: "10px 20px",
-    fontSize: "1.1em",
-    backgroundColor: "#ff6347",
-    color: "white",
-    border: "none",
-    borderRadius: "5px",
-    cursor: "pointer",
-    margin: "0 10px",
+    padding: '10px 20px',
+    fontSize: '1.1em',
+    backgroundColor: '#ff6347',
+    color: 'white',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    margin: '0 10px',
+    fontWeight: 700, // Make buttons bold
   },
 };
 
