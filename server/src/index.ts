@@ -29,10 +29,10 @@ app.post('/update/:id', async (c) => {
   return c.text(id);
 });
 
-const port = 3000
+const port = process.env.PORT as unknown as number;
 console.log(`Server is running on port ${port}`)
 
 serve({
   fetch: app.fetch,
-  port
+  port: port
 })
