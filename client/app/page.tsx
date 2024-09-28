@@ -36,13 +36,21 @@ const WelcomePage: React.FC = () => {
         </button>
       </div>
 
+      {/* Logo positioned at the top left corner */}
       <div
-        style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh' }}
+        style={{
+          position: 'absolute', // Use absolute positioning
+          top: '35px', // Distance from the top
+          left: '50px', // Distance from the left
+        }}
       >
         <img
           src="/logo.png"
           alt="Logo"
-          style={{ width: '300px', height: 'auto', marginRight: '55px' }}
+          style={{
+            width: '150px', // Set a specific width
+            height: 'auto', // Keep height auto to maintain aspect ratio
+          }}
         />
       </div>
     </div>
@@ -60,6 +68,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     padding: '20px',
     textAlign: 'center',
     minHeight: '100vh', // Ensure the container takes up full height
+    position: 'relative', // Set the container to relative positioning
   },
   header: {
     marginBottom: '40px',
