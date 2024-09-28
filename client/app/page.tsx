@@ -11,7 +11,7 @@ const poppins = Poppins({
 // Define a functional component for the Welcome Page
 const WelcomePage: React.FC = () => {
   const navigateToRecipes = () => {
-    window.location.href = "/recipes"; // Change the route as needed
+    window.location.href = "/recipe"; // Change the route as needed
   };
 
   const navigateToAddRecipe = () => {
