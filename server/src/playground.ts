@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "http://localhost:3000";
+const URL = "http://localhost:8000";
 
 async function get(path: string) {
   const res = await axios.get(`${URL}${path}`);
@@ -13,7 +13,7 @@ async function post(path: string, data: any) {
 }
 
 const TEST_RECIPE: Recipe = {
-  _id: "66f809cf1946504ca266bb3c",
+  _id: "66f8621f983872c0488d87b0",
   name: "Beef Wellington",
   ingredients: [
     "Beef",
@@ -23,7 +23,7 @@ const TEST_RECIPE: Recipe = {
     "Mushrooms",
     "Flour",
   ],
-  steps: [
+  instructions: [
     "Season the beef",
     "Cook the mushrooms",
     "Sear the beef",

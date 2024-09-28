@@ -1,12 +1,10 @@
-import { auth } from '@/auth';
 import { Recipe } from '@/lib/types';
 import { httpGet } from '@/lib/web';
 import { Plus } from 'lucide-react';
 import Link from 'next/link';
 
 export default async function RecipeList() {
-  const session = await auth();
-  const recipes: Recipe[] = await httpGet('/list', session);
+  const recipes: Recipe[] = await httpGet('/list');
 
   return (
     <div>
@@ -39,7 +37,7 @@ function RecipeCard({ recipe }: RecipeCardProps) {
   return (
     <Link href={`/recipe/${recipe._id}`}>
       <div className="my-2 w-full rounded-lg border bg-card p-2 hover:bg-gray-200">
-        <h2 className="text-2xl">{recipe.name ?? 'Unnamed Recipe'}</h2>
+        <h2 className="text-2xl">{recipe?.name ?? 'Unnamed Recipe'}</h2>
       </div>
     </Link>
   );
