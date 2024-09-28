@@ -21,7 +21,7 @@ const WelcomePage: React.FC = () => {
   return (
     <div className={poppins.className} style={styles.container}>
       <header style={styles.header}>
-        <h1 style={styles.title}>Welcome to Harmony</h1>
+        <h1 style={styles.title}>Welcome to Flavor Fusion!</h1>
         <p style={styles.description}>
           Cook, share, and create your cherished recipes all in one place.
         </p>
