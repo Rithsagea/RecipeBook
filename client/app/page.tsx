@@ -1,16 +1,9 @@
 "use client";
 
 import React from "react";
-// Importing the logo (make sure the path is correct)
 import logo from "../logo.png"; // Adjust the path as necessary
-
-// Import the font from Google Fonts using the Next.js font optimization if applicable
 import { Poppins } from "next/font/google"; // Optional if you're using Next.js font optimization
 
-// Use Google Fonts link for non-Next.js apps in <head> of _document.js or HTML file.
-// <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
-
-// Use the Poppins font if using Next.js font optimization
 const poppins = Poppins({
   weight: ["400", "700"], // Regular and bold
   subsets: ["latin"],
@@ -45,4 +38,47 @@ const WelcomePage: React.FC = () => {
       </div>
     </div>
   );
-}
+};
+
+// Define inline styles
+const styles: { [key: string]: React.CSSProperties } = {
+  container: {
+    fontFamily: "Playfair Display", // Set the Poppins font
+    backgroundImage: `url("https://as2.ftcdn.net/v2/jpg/03/32/75/39/1000_F_332753934_tBacXEgxnVplFBRyKbCif49jh0Wz89ns.jpg")`,
+    backgroundSize: "cover", // Ensure the image covers the entire area
+    backgroundPosition: "center", // Center the background image
+    color: "#333",
+    padding: "20px",
+    textAlign: "center",
+    minHeight: "100vh", // Ensure the container takes up full height
+  },
+  header: {
+    marginBottom: "40px",
+    backgroundColor: "rgba(255, 255, 255, 0.8)", // Optional: add a white overlay for better readability
+    padding: "20px",
+    borderRadius: "10px",
+  },
+  title: {
+    fontSize: "2.5em",
+    color: "#2d2d2d",
+  },
+  description: {
+    fontSize: "1.2em",
+  },
+  buttonContainer: {
+    marginTop: "20px",
+  },
+  button: {
+    padding: "10px 20px",
+    fontSize: "1.1em",
+    backgroundColor: "#6A9E43",
+    color: "white",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer",
+    margin: "0 10px",
+    fontWeight: 700, // Make buttons bold
+  },
+};
+
+export default WelcomePage;
