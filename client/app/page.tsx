@@ -4,19 +4,30 @@ import React from "react";
 // Importing the logo (make sure the path is correct)
 import logo from "logo.png"; // Adjust the path as necessary
 
+// Import the font from Google Fonts using the Next.js font optimization if applicable
+import { Poppins } from "next/font/google"; // Optional if you're using Next.js font optimization
+
+// Use Google Fonts link for non-Next.js apps in <head> of _document.js or HTML file.
+// <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+// Use the Poppins font if using Next.js font optimization
+const poppins = Poppins({
+  weight: ["400", "700"], // Regular and bold
+  subsets: ["latin"],
+});
+
+// Define a functional component for the Welcome Page
 const WelcomePage: React.FC = () => {
-  // Navigate to the recipes page
   const navigateToRecipes = () => {
     window.location.href = "/recipes"; // Change the route as needed
   };
 
-  // Navigate to the add new recipe page
   const navigateToAddRecipe = () => {
     window.location.href = "/add-recipe"; // Change the route as needed
   };
 
   return (
-    <div style={styles.container}>
+    <div className={poppins.className} style={styles.container}>
       <header style={styles.header}>
         <img src={logo} alt="Cookbook Logo" style={styles.logo} />{" "}
         {/* Add logo here */}
@@ -42,13 +53,10 @@ const WelcomePage: React.FC = () => {
 const styles: { [key: string]: React.CSSProperties } = {
   container: {
     fontFamily: "Arial, sans-serif",
-    backgroundImage: `url('https://as2.ftcdn.net/v2/jpg/03/32/75/39/1000_F_332753934_tBacXEgxnVplFBRyKbCif49jh0Wz89ns.jpg')`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    color: "#fff", // Change text color for visibility against the background
+    backgroundColor: "#f8f8f8",
+    color: "#333",
     padding: "20px",
     textAlign: "center",
-    height: "100vh", // Full viewport height
   },
   header: {
     marginBottom: "40px",
@@ -59,11 +67,10 @@ const styles: { [key: string]: React.CSSProperties } = {
   },
   title: {
     fontSize: "2.5em",
-    color: "#fff", // Ensure title stands out against the background
+    color: "#2d2d2d",
   },
   description: {
     fontSize: "1.2em",
-    color: "#fff", // Ensure description stands out against the background
   },
   buttonContainer: {
     marginTop: "20px",
