@@ -1,4 +1,4 @@
-import { Recipe } from "@/lib/types";
+import { Recipe } from '@/lib/types';
 
 interface RecipeParams {
   id: string;
@@ -16,19 +16,13 @@ export default async function RecipePage({ params }: { params: RecipeParams }) {
       <h1 className="text-4xl">Ingredients</h1>
       <article className="prose">
         <ol className="list-decimal">
-          {recipe.ingredients?.map((i, inx) =>
-            <li key={inx}>{i}</li>
-          )}
+          {recipe.ingredients?.map((i, inx) => <li key={inx}>{i}</li>)}
         </ol>
       </article>
 
       <h1 className="text-4xl">Steps</h1>
       <article className="prose">
-        <ol className="list-decimal">
-          {recipe.steps?.map((i, inx) =>
-            <li key={inx}>{i}</li>
-          )}
-        </ol>
+        <ol className="list-decimal">{recipe.steps?.map((i, inx) => <li key={inx}>{i}</li>)}</ol>
       </article>
     </div>
   );
