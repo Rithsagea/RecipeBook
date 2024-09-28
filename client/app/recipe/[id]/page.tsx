@@ -7,7 +7,7 @@ interface RecipeParams {
 export default async function Home({ params }: { params: RecipeParams }) {
   const { id } = params;
 
-  const res = await fetch(`http://localhost:8000/recipe/${id}`);
+  const res = await fetch(`http://${process.env.BACKEND_URL}/recipe/${id}`);
   const recipe: Recipe = await res.json();
 
   return (
