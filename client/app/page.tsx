@@ -35,6 +35,11 @@ const WelcomePage: React.FC = () => {
           Add New Recipe
         </button>
       </div>
+
+
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+        <img src="/logo.png" alt="Logo" style={{ width: "300px", height: "auto" }} />
+      </div>
     </div>
   );
 };
