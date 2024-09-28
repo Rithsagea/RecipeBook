@@ -4,7 +4,7 @@ interface RecipeParams {
   id: string;
 }
 
-export default async function Home({ params }: { params: RecipeParams }) {
+export default async function RecipePage({ params }: { params: RecipeParams }) {
   const { id } = params;
 
   const res = await fetch(`http://${process.env.BACKEND_URL}/recipe/${id}`);
