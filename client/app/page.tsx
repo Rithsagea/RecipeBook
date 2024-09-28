@@ -2,7 +2,7 @@
 
 import React from "react";
 // Importing the logo (make sure the path is correct)
-import logo from "logo.png"; // Adjust the path as necessary
+import logo from "../logo.png"; // Adjust the path as necessary
 
 // Import the font from Google Fonts using the Next.js font optimization if applicable
 import { Poppins } from "next/font/google"; // Optional if you're using Next.js font optimization
