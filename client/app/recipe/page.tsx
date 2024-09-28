@@ -1,9 +1,11 @@
+import { auth } from '@/auth';
 import { Recipe } from '@/lib/types';
+import { httpGet } from '@/lib/web';
 import Link from 'next/link';
 
 export default async function RecipeList() {
-  const res = await fetch(`http://${process.env.BACKEND_URL}/list`);
-  const recipes = (await res.json()) as Recipe[];
+  const session = await auth();
+  const recipes: Recipe[] = await httpGet('/list', session);
 
   return (
     <div>

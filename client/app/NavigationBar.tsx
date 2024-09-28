@@ -11,7 +11,6 @@ import Link from 'next/link';
 export default async function Navigation() {
   const session = await auth();
   const email = session?.user?.email;
-  console.log(email);
 
   return (
     <NavigationMenu>

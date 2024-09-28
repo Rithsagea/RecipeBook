@@ -19,6 +19,7 @@ app.get('/new', async (c) => {
 app.get('/recipe/:id', async (c) => {
   const { id } = c.req.param();
   const recipe = await findRecipe(id);
+  console.log(c.req.query())
   return c.json(recipe);
 });
 

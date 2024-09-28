@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import logo from "../logo.png"; // Adjust the path as necessary
 import { Poppins } from "next/font/google"; // Optional if you're using Next.js font optimization
 
 const poppins = Poppins({

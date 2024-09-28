@@ -1,4 +1,6 @@
+import { auth } from '@/auth';
 import { Recipe } from '@/lib/types';
+import { httpGet } from '@/lib/web';
 
 interface RecipeParams {
   id: string;
@@ -7,8 +9,8 @@ interface RecipeParams {
 export default async function RecipePage({ params }: { params: RecipeParams }) {
   const { id } = params;
 
-  const res = await fetch(`http://${process.env.BACKEND_URL}/recipe/${id}`);
-  const recipe: Recipe = await res.json();
+  const session = await auth();
+  const recipe: Recipe = await httpGet(`/recipe/${id}`, session);
 
   return (
     <div>
