@@ -37,7 +37,7 @@ const WelcomePage: React.FC = () => {
       </div>
 
 
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "50vh" }}>
         <img src="/logo.png" alt="Logo" style={{ width: "300px", height: "auto" }} />
       </div>
     </div>
