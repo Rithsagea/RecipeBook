@@ -29,7 +29,7 @@ const WelcomePage: React.FC = () => {
   return (
     <div className={poppins.className} style={styles.container}>
       <header style={styles.header}>
-        <h1 style={styles.title}>Welcome to Your Personal Recipe Book</h1>
+        <h1 style={styles.title}>Welcome to Harmony</h1>
         <p style={styles.description}>
           Cook, share, and create your cherished recipes all in one place.
         </p>
@@ -50,7 +50,7 @@ const WelcomePage: React.FC = () => {
 // Define inline styles (optional)
 const styles: { [key: string]: React.CSSProperties } = {
   container: {
-    fontFamily: "'Poppins', sans-serif", // Set the Poppins font
+    fontFamily: "Playfair Display", // Set the Poppins font
     backgroundColor: '#f8f8f8',
     color: '#333',
     padding: '20px',
@@ -76,7 +76,7 @@ const styles: { [key: string]: React.CSSProperties } = {
   button: {
     padding: '10px 20px',
     fontSize: '1.1em',
-    backgroundColor: '#ff6347',
+    backgroundColor: '#6A9E43',
     color: 'white',
     border: 'none',
     borderRadius: '5px',
