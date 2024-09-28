@@ -1,5 +1,5 @@
-import { Recipe } from "@/lib/types";
-import Link from "next/link";
+import { Recipe } from '@/lib/types';
+import Link from 'next/link';
 
 export default async function RecipeList() {
   const res = await fetch(`http://${process.env.BACKEND_URL}/list`);
@@ -13,9 +13,7 @@ export default async function RecipeList() {
         <ul className="list-disc">
           {recipes.map((r, inx) => (
             <li key={inx}>
-              <Link href={`/recipe/${r._id}`}>
-                {r.name ?? "Unnamed Recipe"}
-              </Link>
+              <Link href={`/recipe/${r._id}`}>{r.name ?? 'Unnamed Recipe'}</Link>
             </li>
           ))}
         </ul>
