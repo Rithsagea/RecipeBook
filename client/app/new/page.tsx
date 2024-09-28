@@ -1,6 +1,5 @@
 'use client';
 
-import { auth } from '@/auth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Table, TableBody, TableCell, TableHeader, TableRow } from '@/components/ui/table';
@@ -19,7 +18,7 @@ export default function NewRecipe() {
     console.log('Creating new recipe!');
 
     const recipe: Partial<Recipe> = {
-      _id: await httpGet('/new'),
+      ...(await httpGet('/new')),
       name,
       ingredients,
       instructions,

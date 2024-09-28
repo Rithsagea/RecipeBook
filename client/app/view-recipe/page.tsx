@@ -31,24 +31,24 @@ export default function RecipeDetails() {
   };
 
   return (
-    <div className={`${lato.className} max-w-3xl mx-auto p-6`}>
+    <div className={`${lato.className} mx-auto max-w-3xl p-6`}>
       {/* Big Title with Fancy Font */}
-      <h1 className={`${playfairDisplay.className} text-5xl font-bold text-center mb-8`}>
+      <h1 className={`${playfairDisplay.className} mb-8 text-center text-5xl font-bold`}>
         {recipe.name}
       </h1>
 
       {/* Big Image */}
-      <div className="w-full h-96 mb-8">
+      <div className="mb-8 h-96 w-full">
         <img
           src={`/${recipe.image}`} // Reference to sample.png in the public folder
           alt={recipe.name}
-          className="w-full h-full object-cover rounded-lg"
+          className="h-full w-full rounded-lg object-cover"
         />
       </div>
 
       {/* Ingredients Section */}
       <section className="mb-8">
-      <h2 className={`${playfairDisplay.className} text-3xl font-bold mb-8`}>Ingredients</h2>
+        <h2 className={`${playfairDisplay.className} mb-8 text-3xl font-bold`}>Ingredients</h2>
         <ul className="list-disc pl-6 text-lg">
           {recipe.ingredients.map((ingredient, index) => (
             <li key={index} className="mb-2">
@@ -60,7 +60,7 @@ export default function RecipeDetails() {
 
       {/* Description Section */}
       <section>
-        <h2 className={`${playfairDisplay.className} text-3xl font-bold mb-8`}>Description</h2>
+        <h2 className={`${playfairDisplay.className} mb-8 text-3xl font-bold`}>Description</h2>
         <p className="text-lg leading-relaxed">{recipe.description}</p>
       </section>
     </div>
